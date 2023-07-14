@@ -12,7 +12,7 @@ const dataAPI = (await axios.get(`${URL_BASE}/1`)).data;
 // Configurar los routers
 // Ejemplo: router.use('/auth', authRouter);
 router.use("/", (req, res) => {
-  res.send("Holis. Estas en la home de la Api de mauri :)" + dataAPI);
+  res.json(dataAPI);
 });
 
 //* Defino los dos routers, pokemons y types
