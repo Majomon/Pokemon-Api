@@ -6,9 +6,7 @@ const getPokemonData = require("../utils/getPokemonData");
 const getPokemonApi = async () => {
   try {
     // Peticion de los pokemons a la Api
-    const dataAPI = (
-      await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=151`)
-    ).data;
+    const dataAPI = (await axios.get(`${URL_BASE}?limit=151`)).data;
     // Si la peticion sale mal da un error
     if (!dataAPI) {
       throw new Error("Error al hacer la petición a la API");
